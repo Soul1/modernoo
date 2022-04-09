@@ -388,3 +388,14 @@
 }
 
 //end advantages
+//start tutorial
+
+.tutorial{
+ padding: 70px 0 120px;
+ &__inner{
+  display: flex;
+  justify-content: space-between;
+ }
+}
+
+//end tutorial
