@@ -1,6 +1,6 @@
+@import "fonts";
 @import "vars";
 @import "global";
-@import "fonts";
 
 //start header
 
@@ -65,7 +65,6 @@
 
 //end header
 //start search
-
 
 .search {
  min-height: 530px;
@@ -303,7 +302,6 @@
  }
 }
 
-
 //end product__slider
 //start advantages
 
@@ -390,12 +388,222 @@
 //end advantages
 //start tutorial
 
-.tutorial{
+.tutorial {
  padding: 70px 0 120px;
- &__inner{
+
+ &__inner {
   display: flex;
   justify-content: space-between;
+ }
+
+ &__item {
+  max-width: 370px;
+  width: 100%;
+
+  &-images {
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   min-height: 270px;
+  }
+
+  &-title {
+   @include f700;
+   font-size: 24px;
+   padding: 30px 10px;
+   text-align: center;
+   background-color: #f8f8f8;
+   color: $bg;
+  }
  }
 }
 
 //end tutorial
+//start footer
+
+.footer {
+ background-color: $bg;
+
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0 80px;
+ }
+}
+
+.footer__copy {
+ border-top: 1px solid #424d53;
+}
+
+.footer__copy-text {
+ font-size: 15px;
+ color: #919699;
+ padding: 25px 0;
+ text-align: center;
+}
+
+.footer__col {
+ max-width: 270px;
+ width: 100%;
+
+ &-menu {
+  max-width: 220px;
+ }
+
+ &-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  position: relative;
+
+  &::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 2px;
+   width: 51px;
+   height: 3px;
+   background-color: $green;
+  }
+ }
+
+ &-text {
+  color: #b7c3c8;
+  margin-bottom: 30px;
+ }
+}
+
+.footer__info {
+ margin-top: 18px;
+ @include f500;
+ color: #fff;
+ padding-left: 30px;
+ position: relative;
+
+ &::before {
+  content: '\e947';
+  font-family: icomoon;
+  color: $green;
+  position: absolute;
+  font-size: 18px;
+  left: 0;
+ }
+}
+
+.footer__info-phone {
+ &::before {
+  content: '\e942';
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ }
+}
+
+.footer__col-list {
+ a {
+  color: #919699;
+  margin-bottom: 13px;
+  padding-left: 20px;
+  position: relative;
+
+  &::before {
+   content: '\f105';
+   font-family: icomoon;
+   color: $green;
+   font-size: 18px;
+   left: 0;
+   position: absolute;
+  }
+ }
+}
+
+.footer__social-link {
+ margin-bottom: 33px;
+
+ li {
+  display: inline-block;
+
+  & + li {
+   margin-left: 7px;
+  }
+ }
+
+ a {
+  width: 28px;
+  height: 28px;
+  background-image: url("../../images/css_sprites.png");
+ }
+}
+
+.link__twitter {
+ background-position: -28px -28px;
+}
+
+.link__youtube {
+ background-position: -28px -0;
+}
+
+.link__pinterest {
+ background-position: -56px 0;
+}
+
+.link__linledin {
+ background-position: -0 -28px;
+}
+
+.footer__form-title {
+ color: #fff;
+ font-size: 20px;
+ margin-bottom: 15px;
+}
+
+.footer__form {
+ form {
+  display: flex;
+ }
+
+ input {
+  background-color: #2f3c43;
+  color: #fff;
+  padding-right: 50px;
+  padding-left: 13px;
+  height: 40px;
+  border: none;
+  width: calc(100% - 44px);
+
+  &::placeholder {
+   color: #697378;
+  }
+ }
+
+ button {
+  width: 44px;
+  height: 40px;
+  background-color: $green;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  &::after{
+   content: '\f124';
+   font-family: icomoon;
+   color: #fff;
+   font-size: 20px;
+   width: 17px;
+   height: 17px;
+  }
+ }
+
+}
+
+//end footer
